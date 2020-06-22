@@ -22,41 +22,6 @@
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 
-  <script>
-    if('serviceWorker' in navigator){
-        navigator.serviceWorker.register('./sw.js')
-        .then(reg=>{
-          console.log('service worker registered',reg) 
-        })
-        .catch(err=>{
-          console.log('service wroker reg failed',err)
-        })
-     
-    }
-
-
-    
-  // if ('serviceWorker' in navigator) {
-  //   navigator.serviceWorker.register('ngsw-worker.js')
-  //     .then(() => console.log('service worker installed'))
-  //     .catch(err => console.error('Error', err));
-  // }
-
-
-
-
-
-  //   if ('serviceWorker' in navigator) {
-  //     navigator.serviceWorker.register('../src/sw.js').then(function(registration) {
-  //     console.log('ServiceWorker registration successful with scope: ', registration.scope);
-  //   }).catch(function(err) {
-  //     //registration failed :(
-  //     console.log('ServiceWorker registration failed: ', err);
-  //   });
-  // }else {
-  //   console.log('No service-worker on this browser');
-  // }
-  </script>
-
+  
 </body>
 </html>
