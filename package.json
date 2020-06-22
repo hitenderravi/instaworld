@@ -1,6 +1,7 @@
 {
   "name": "travelgram",
   "version": "0.0.0",
+  "homepage": "https://github.com/hitenderravi/instaworld",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
