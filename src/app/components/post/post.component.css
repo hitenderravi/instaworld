@@ -1,0 +1,113 @@
+img{
+    height: 300px;
+    transition:0.5s ease;
+    border-radius: 3px;
+}
+.card{
+    height: 300px;
+    width: 100% ;
+    border: none;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+.like{
+    margin-bottom: 10px;
+    border-bottom: 1px solid black ;
+}
+.faThumbsDown{
+    cursor: pointer;
+}
+.faThumbsUp{
+    cursor: pointer;
+}
+img:hover{
+    -webkit-transform: scale(1.1);
+	transform: scale(1.04);
+    transition:0.5s ease;
+   
+}
+.modal-body img{
+    width: 100%;
+    height: 400px;
+}
+.commentpic img{
+    width: 50px;
+    height: 50px;
+}
+.comment input{
+    margin-top: 312px;
+}
+.comment h2{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 11px 25px;
+}
+
+.comment button{
+    margin-top: 312px;
+}
+
+.commenttext h1{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 11px 5px;
+}
+.commenttext{
+    margin:12px 0px;
+}
+i{
+    cursor: pointer;
+    font-size: 25px;
+    margin: 0px;
+}
+i h1{
+    font-size: 22px ;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .card{
+        height: 400px;
+        width: 100%;
+        border: none;
+      
+        
+    }
+    img{
+        width: 375px;
+        height: 400px;
+    }
+    .bigimage img{
+        display: none;
+    }
+    .comment button{
+        margin: 1px 280px;
+    }
+    .postinput input{
+        width: 100%;
+        margin-right: 145px;
+    }
+    .comment h5{
+        font-size: 14px;
+        font-weight: 500;
+        margin: 11px 25px;
+    }
+    .ftr{
+        height: 65px;
+        
+    }
+    .posthead{
+        margin-left: 13px;
+        margin-top: 40px;
+    }
+    .posthead h2{
+        font-size: 18px;
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+    .posthead img{
+        height: 50px;
+        width: 50px;
+    }
+
+}

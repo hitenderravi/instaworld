@@ -1,0 +1,32 @@
+<div  class="container userinfo">
+    <div class="row  ">
+        <div class="col-md-3 col-sm-0"></div>
+        <div class="col-md-2 col-sm-0">
+        <img [src]="user.picture"  class="rounded-circle ml-2">
+      
+
+        </div>
+        <div class="col-md-1 col-sm-0"></div>
+        <div class="col-md-4 col-sm-12 content">
+            <div class="row"><h3>{{user.name | titlecase}}</h3></div>
+            <div class="row"><h1>{{posts.length}} Posts</h1></div>
+
+            <div class="row"><h2>{{user.bio| titlecase}}</h2></div>
+            
+        </div>
+        <div class="col-md-4 col-sm-0"></div>
+        
+
+    </div>
+</div>
+
+<!-- <div class="container userinfo">
+    <div class="row">
+        <div class="col-xs-2"> <img [src]="user.picture"  class="rounded-circle ml-2"></div>
+        <div class="col-xs-8"> <div class="row"><h3>{{user.name | titlecase}}</h3></div></div>
+    </div>
+</div> -->
+
+
+
+

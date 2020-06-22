@@ -1,0 +1,202 @@
+
+<div class="container">
+ <div class="row">
+
+  <div class="row posthead">
+    <div *ngIf="uid && !mainid">
+      <div class="row " >
+         <a  href="#" target="_blank">
+            <img
+              [src]="users[6]"
+              height="500"
+              width="auto"
+              class="rounded-circle ml-2"
+            />
+        </a> 
+        <h2>{{users[5]}}</h2>
+       </div>
+
+      
+    </div>
+    <div class="row posthead">
+    <div *ngIf="mainid">
+      <div class="row  " >
+        <a  href="#" target="_blank">
+           <img
+             [src]="otherusers[6]"
+             height="500"
+             width="auto"
+             class="rounded-circle ml-2"
+           />
+       </a> 
+       <h2>{{otherusers[5]}}</h2>
+      </div>
+      
+    </div>
+  </div> 
+  
+    
+  </div>
+    <div class="card card2 mb-3 border-secondary">
+        <a href="#" target="_blank">
+          <img
+            [src]="post.picture"
+            height="500"
+            width="auto"
+            class="card-img-top img-fluid"
+          />
+        </a>
+        <!-- <div class="card-body">
+          <h5 class="card-title text-primary text-uppercase">
+            {{ post.locationName }}
+          </h5>
+          <p class="card-text">{{ post.description }}</p>
+          <p class="card-text">
+            <small class="text-muted">by:- {{ post.by }}</small>
+          </p>
+        </div> -->
+        <div
+          class="card-footer like  bg-transparent border-secondary d-flex justify-content-around align-content-center"
+        >
+          <div (click)="upvotePost()" >
+            <fa-icon [icon]="faThumbsUp" class="faThumbsUp" size="lg" ></fa-icon>
+            {{ upvote }}
+          </div>
+          <div (click)="downvotePost()" class="text-secondary">
+            <fa-icon [icon]="faThumbsDown" class="faThumbsDown" size="lg" ></fa-icon>
+            {{ downvote }}
+          </div>
+          <i class="fa fa-comments " (click)="openLg(content)" aria-hidden="true">{{comments.length}}</i>
+
+
+
+          <ng-template #content let-modal>
+
+            <div class="modal-header commentpic">
+              <div *ngIf="mainid" class="row usercommentname">
+                <a href="#" target="_blank">
+                  <img
+                    [src]="otherusers[6]"
+                    height="500"
+                    width="auto"
+                    class="rounded-circle ml-2"
+                  />
+                </a>
+            <h2>  {{otherusers[5]}}</h2>
+               </div>   
+               <div *ngIf="uid && !mainid" class="row usercommentname">
+                <a href="#" target="_blank">
+                  <img
+                    [src]="users[6]"
+                    height="500"
+                    width="auto"
+                    class="rounded-circle ml-2"
+                  />
+                </a>
+            <h2>    {{users[5]}}</h2>
+               </div>
+               <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+             
+            </div>
+
+
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 bigimage">
+                  <a href="#" target="_blank">
+                    <img
+                      [src]="post.picture"
+                      height="500"
+                      width="auto"
+                      class="card-img-top img-fluid"
+                    /></a>
+                </div>
+
+
+                <div class="col-md-6 comment commentpic">
+                <div class="row">
+               <div *ngIf="uid && !mainid"  >
+                 
+               <div class="row commenttext" *ngFor="let comment of comments">
+               <a  href="#" target="_blank">
+                    <img
+                      [src]="comment.picture"
+                      height="500"
+                      width="auto"
+                      class="rounded-circle ml-2"
+                    />
+                </a> 
+                  
+              <h5>    {{comment.username}}</h5>
+             <h1> {{comment.comment}}</h1>  
+                </div>
+              </div>
+               <div *ngIf="mainid">
+               <div  class="row commenttext" *ngFor="let comment of comments">
+               
+                <a  href="#" target="_blank">
+                  <img
+                    [src]="comment.picture"
+                    height="500"
+                    width="auto"
+                    class="rounded-circle ml-2"
+                  />
+                </a> 
+               
+            <h5>    {{comment.username}}</h5>
+          <h1> {{comment.comment}}</h1>  
+             
+             
+             </div></div>
+            </div>
+              
+                  
+          </div>
+        </div>
+       
+
+      </div>  
+                 
+                 <!-- <div class="col-md-10"><input type="text" placeholder="write a comment" class="form-control"></div> -->
+                 <div class="modal-footer ftr">
+                   <div class="row">
+                     
+                      <form (ngSubmit)="onSubmit(f)" #f='ngForm'>
+                       
+                                <div class="form-group postinput row">
+                                     <input
+                            type="name"
+                            class="form-control"
+                            id="comment"
+                            name="comment"
+                            placeholder="write a comment"
+                            ngModel
+                          />
+                        </div>
+                          <!-- <button class="btn btn-primary"  type="submit">post</button> -->
+                        
+                  </form>
+                </div>
+                </div>
+                
+              
+            
+          
+            </ng-template>
+            
+          
+            <!-- <button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(content)">Large modal</button> -->
+          <!-- <a [href]="getInstaUrl()" target="_blank" class="text-primary">
+            <fa-icon [icon]="faShareSquare" size="lg" primaryColor="blue"></fa-icon>
+          </a> -->
+        </div>
+      </div>
+      
+
+
+
+    
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.active{
+    border-bottom: 1px solid black;
+    color: blue;
+}
+a{
+    color: black;
+}
+nav{
+    border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+    background-color: white;
+}
+.headcontent a{
+    color: black;
+}

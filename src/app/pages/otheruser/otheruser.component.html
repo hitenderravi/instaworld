@@ -1,0 +1,66 @@
+<div  class="container userinfo">
+  <div class="row  mt-5">
+      <div class="col-md-3"></div>
+      <div class="col-md-2">
+      <img [src]="users[6]"  class="rounded-circle ml-2">
+    
+
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-4 content">
+          <div class="row"><h3>{{users[5] | titlecase}}</h3></div>
+          <div class="row"><h1>{{posts.length}} Posts</h1></div>
+
+          <div class="row"><h2>{{users[0]| titlecase}}</h2></div>
+          
+      </div>
+      <div class="col-md-4"></div>
+      
+
+  </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 col-xs-12" *ngFor="let post of posts">
+        
+      
+      <div
+        *ngIf="isLoading; else Content"
+        class="d-flex justify-content-center align-items-center min-vh-100"
+      >
+        <div
+          class="spinner-border text-light"
+          style="width: 3rem; height: 3rem;"
+          role="status"
+        ></div>
+      </div>
+    
+      <ng-template #Content>
+       
+  
+        <div class="row">
+         
+            <!-- will render list of post here -->
+            <div >
+              
+                <app-post [mainid]='mainid' [post]='post'></app-post>
+            </div>
+         
+          
+        </div>
+      </ng-template>
+    </div>
+    <!-- <div class="col col-md-5">
+      <p class="text-muted text-uppercase text-center">Recent new User</p>
+      <div *ngFor="let user of users"> 
+          <app-user [user]="user"></app-user>
+          
+      </div>
+    </div> -->
+  </div>
+  
+    </div>
+   
+    
